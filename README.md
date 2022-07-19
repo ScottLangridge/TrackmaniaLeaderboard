@@ -7,4 +7,4 @@ Quick (and very dirty) setup:
 1. git clone git@github.com:ScottLangridge/TrackmaniaGhosts.git
 1. screen
 1. python3 leaderboard.py
-1. ctrl + a, ctrl + d
+1. ctrl+a, ctrl+d
