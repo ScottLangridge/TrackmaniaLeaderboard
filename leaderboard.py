@@ -2,6 +2,7 @@ import os
 
 from time import sleep
 from collections import defaultdict
+from datetime import datetime
 import re
 
 
@@ -105,9 +106,10 @@ campaign_tracks = [
     'E04-Obstacle',
     'E05-Endurance'
 ]
+
 while True:
     # Load in times
-    repo_path = 'trackmaniaghosts'
+    repo_path = 'TrackmaniaGhosts'
     os.system(f'cd {repo_path} && git pull')
     contents = get_contents(repo_path)
     directories = filter(lambda x: '.' not in x, contents)
@@ -180,6 +182,8 @@ Points System: One point for finishing, plus one point per player beaten.
 TIME LEADERBOARD
 ================
 {time_lb}
+=================================
+Last updated: {datetime.now().strftime("%d/%m/%Y %H:%M:%S")}
     '''
 
     out = out.replace('\n', '</br>')
